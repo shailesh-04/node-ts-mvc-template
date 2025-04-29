@@ -14,7 +14,7 @@ const time = new Date().toISOString().replace(/[-:.TZ]/g, "").slice(0, 14);
 const fileName = `${arg}_${time}.ts`;
 const src = path.resolve(__dirname, "../");
 console.log(arg,className,tableName,time);
-const pathName = [
+export const pathName = [
     {
         targetDir: path.join(src, "/database/migrations"),
         filePath: path.join(src, "/database/migrations/" + fileName),

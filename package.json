@@ -9,6 +9,7 @@
         "start": "node dist/index.js",
         "migrate": "ts-node -r tsconfig-paths/register src/scripts/migrations.ts",
         "create:migration": "ts-node -r tsconfig-paths/register src/scripts/createMigrationFile.ts",
+        "remove:migration": "ts-node -r tsconfig-paths/register src/scripts/removeMigrationFiles.ts",
         "test": "ts-node test.ts"
     },
     "repository": {
