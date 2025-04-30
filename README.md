@@ -5,7 +5,6 @@ Here’s your full **README.md** file, clean and professional based on what you 
 
 ---
 
-
 # Node.js + TypeScript MVC Template
 
 A clean and scalable Node.js + TypeScript starter template built with MVC and OOP architecture.  
