@@ -8,7 +8,7 @@
         "build": "tsc && tsc-alias",
         "start": "node dist/index.js",
         "migrate": "ts-node -r tsconfig-paths/register src/scripts/migrations.ts",
-        "create:migration": "ts-node -r tsconfig-paths/register src/scripts/createMigrationFile.ts",
+        "create:migration": "node src/scripts/createMigrationFile.js",
         "remove:migration": "ts-node -r tsconfig-paths/register src/scripts/removeMigrationFiles.ts",
         "test": "ts-node test.ts"
     },
@@ -22,6 +22,9 @@
         "url": "https://github.com/shailesh-04/node-ts-mvc-template/issues"
     },
     "homepage": "https://github.com/shailesh-04/node-ts-mvc-template#readme",
+    "imports": {
+        "#services/*":"./src/services/*"
+    },
     "dependencies": {
         "dotenv": "^16.5.0",
         "express": "^5.1.0",

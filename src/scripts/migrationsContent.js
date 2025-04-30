@@ -1,4 +1,4 @@
-export const migrationContent = (className:string,tableName:string)=> `import database from "@config/database";
+export const migrationContent = (className,tableName)=> `import database from "@config/database";
 import { IClass${className}, I${className} } from "@interfaces/${tableName}";
 import Migration from "@services/migration";
 class ${className} implements IClass${className} {
@@ -39,7 +39,7 @@ export const migration = ${tableName}Migration.migration;
 export default ${tableName}Migration;
 `;
 
-export const interfaceContent = (className:string)=> `import Migration from "@services/migration";
+export const interfaceContent = (className)=> `import Migration from "@services/migration";
 export interface I${className} {
     id?: string;
     demo: string;
@@ -55,7 +55,7 @@ export interface IClass${className} {
     delete(id: string): Promise<any[]>;
 }
 `;
-export const modelContent = (className:string,tableName:string,time:string)=> `import ${tableName}Migration from "@migrations/${tableName}_${time}";
+export const modelContent = (className,tableName,time)=> `import ${tableName}Migration from "@migrations/${tableName}_${time}";
 class ${className}Model {
     create = ${tableName}Migration.create;
     read = ${tableName}Migration.read;
@@ -65,7 +65,7 @@ class ${className}Model {
 }
 export default new ${className}Model();`;
 
-export const controllerContent = (className:string,tableName:string) =>`import ${tableName}Model from "@models/${tableName}";
+export const controllerContent = (className,tableName) =>`import ${tableName}Model from "@models/${tableName}";
 import { Request, Response } from "express";
 class ${className}Controller {
     //POST api/${tableName}
@@ -155,7 +155,7 @@ class ${className}Controller {
 }
 export default ${className}Controller ;`;
 
-export const routerContent = (tableName:string)=>`import { Router } from "express";
+export const routerContent = (tableName)=>`import { Router } from "express";
 import ${tableName}Controller from "@controllers/${tableName}";
 const ${tableName}Router = Router();
 ${tableName}Router.post("/",${tableName}Controller.create);
