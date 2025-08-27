@@ -1,18 +1,11 @@
 {
-  "extends": "./tsconfig.paths.json",
-  "compilerOptions": {
-      "target": "ES2022",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "rootDir": ".",
-      "outDir": "dist",
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "typeRoots": ["./node_modules/@types", "./types"],
-      "types": ["node"],
-  },
-  "include": ["src/**/*", "index.ts"],
-  "exclude": ["node_modules"]
+    "extends": "./tsconfig.paths.json",
+    "compilerOptions": {
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "target": "ES2022",
+        "sourceMap": true,
+        "outDir": "./dist"
+    },
+    "include": ["./src/**/*"]
 }

@@ -2,16 +2,10 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@color":["./src/utils/color.ts"],
-            "@controllers/*": ["./src/controllers/*"],
-            "@models/*": ["./src/database/models/*"],
-            "@migrations/*": ["./src/database/migrations/*"],
-            "@routes/*": ["./src/routes/*"],
-            "@services/*": ["./src/services/*"],
-            "@config/*": ["./src/config/*"],
-            "@utils/*": ["./src/utils/*"],
-            "@interfaces/*": ["./src/interfaces/*"],
-            "@scripts/*": ["./src/scripts/*"]
+            "#controllers/*": ["./src/controllers/*"],
+            "#models/*": ["./src/models/*"],
+            "#routes/*": ["./src/routes/*"],
+            "#config/*": ["./src/config/*"]
         }
     }
 }

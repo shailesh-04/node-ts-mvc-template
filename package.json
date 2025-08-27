@@ -1,69 +1,34 @@
 {
-    "name": "ts-mvc-template",
-    "version": "1.0.0",
-    "description": "A clean, scalable Node.js + TypeScript project starter with MVC and OOP architecture, store layer, MySQL database migrations, and built-in CRUD operations for rapid backend development.",
-    "main": "index.ts",
-    "scripts": {
-        "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register index.ts",
-        "build": "tsc && tsc-alias",
-        "start": "node dist/index.js",
-        "migrate": "ts-node -r tsconfig-paths/register src/scripts/migrations.ts",
-        "create:migration": "node src/scripts/createMigrationFile.js",
-        "remove:migration": "ts-node -r tsconfig-paths/register src/scripts/removeMigrationFiles.ts",
-        "test": "ts-node test.ts"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/shailesh-04/node-ts-mvc-template.git"
-    },
-    "author": "shialesh makavana",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/shailesh-04/node-ts-mvc-template/issues"
-    },
-    "homepage": "https://github.com/shailesh-04/node-ts-mvc-template#readme",
-    "imports": {
-        "#services/*":"./src/services/*"
-    },
-    "dependencies": {
-        "dotenv": "^16.5.0",
-        "express": "^5.1.0",
-        "mysql2": "^3.14.0"
-    },
-    "devDependencies": {
-        "@types/express": "^4.17.17",
-        "@types/node": "^22.14.1",
-        "ts-node-dev": "^2.0.0",
-        "tsc-alias": "^1.8.7",
-        "tsconfig-paths": "^4.2.0",
-        "typescript": "^5.0.0"
-    },
-    "keywords": [
-        "nodejs",
-        "typescript",
-        "mvc",
-        "express",
-        "api",
-        "boilerplate",
-        "template",
-        "backend",
-        "restful-api",
-        "node-ts",
-        "express-typescript",
-        "node-typescript",
-        "server",
-        "clean-architecture",
-        "project-structure",
-        "scalable",
-        "starter-template",
-        "best-practices",
-        "authentication",
-        "routing",
-        "middleware",
-        "dotenv",
-        "nodemon",
-        "ts-node",
-        "eslint",
-        "prettier"
-    ]
+  "name": "ts-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "imports": {
+    "#controllers/*": "./src/controllers/*",
+    "#models/*": "./src/models/*",
+    "#routes/*": "./src/routes/*",
+    "#config/*": "./src/config/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
 }
